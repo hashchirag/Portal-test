@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en"> <!--<![endif]-->
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js"
+            integrity="sha256-55Jz3pBCF8z9jBO1qQ7cIf0L+neuPTD1u7Ytzrp2dqo=" crossorigin="anonymous"></script>
+
+    <script src="http://tristanedwards.me/u/SweetAlert//lib/sweet-alert.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://tristanedwards.me/u/SweetAlert//lib/sweet-alert.css">
+
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+
+
+    <!--<script src="validation-functions.js"></script>-->
+    <!-- BootstrapValidator CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
+
+    <!-- BootstrapValidator JS -->
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="http://now.hashlearn.com/static/img/myicon.409497e7ba52.png"/>
+
+    <title>HashLearn - Apply for Online Teaching Jobs</title>
+
+    <meta property="og:image" content="http://now.hashlearn.com/static/img/HashLearnCover.f3c825b6ec7f.png"/>
+    <meta property="og:url" content="http://now.hashlearn.com/page/tutors/apply"/>
+    <meta property="og:title" content="HashLearn - Apply for Online Teaching Jobs"/>
+    <meta property="og:description"
+          content="Looking for online jobs for college students or work from home jobs? Explore teaching jobs with HashLearn using your Android phone and earn on the go!"/>
+    <meta charset="utf-8"/>
+    <meta name="description"
+          content="Looking for online jobs for college students or work from home jobs? Explore teaching jobs with HashLearn using your Android phone and earn on the go!"/>
+    <meta name="keywords" content="hashlearn, mobile, tutor, app, improve,  exam, preparation"/>
+    <meta name="author" content="hashlearn"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="revisit-after" content="1 month">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,800&amp;subsetting=all' rel='stylesheet'
+          type='text/css'>
+
+    <style type="text/css" scoped>
+        .GeneratedText {
+            font-family: Helvetica, sans-serif;
+            font-size: 2em;
+            font-weight: bold;
+            letter-spacing: 0.2em;
+            line-height: 1.3em;
+            color: #66FFFF;
+            background-color: #000000;
+            padding: 0.1em;
+        }
+    </style>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-49271438-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+    <style>
+        .footer-seo-text {
+            color: #33A6B2;
+            font-size: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="styles/detailsPage.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <script src="https://apis.google.com/js/api:client.js"></script>
+
+    <!--This it Google Login Process-->
+    <script>
+        var googleUser = {};
+        var googleLogin = function () {
+            gapi.load('auth2', function () {
+                // Retrieve the singleton for the GoogleAuth library and set up the client.
+                auth2 = gapi.auth2.init({
+                    client_id: '495469702078-uceb5157ubma4d3qjd4nnthiprf0dthb.apps.googleusercontent.com',
+                    cookiepolicy: 'single_host_origin',
+                    // Request scopes in addition to 'profile' and 'email'
+                    //scope: 'additional_scope'
+                });
+                attachSignin(document.getElementById('gmailSignUp'));
+                attachSignin(document.getElementById('gmailLogin'));
+
+            });
+        };
+
+        googleLogin();
+
+
+        //This is the call back after the google sign in happens.
+        function attachSignin(element) {
+            auth2.attachClickHandler(element, {},
+                    function (googleUser) {
+
+
+                        var google_email = googleUser.getBasicProfile().getEmail();
+                        var google_name = googleUser.getBasicProfile().getName()
+
+                        console.log("Google returned me " + google_email);
+                        console.log(googleUser.getBasicProfile().getName());
+
+                        //Make the login/signup call here based on the email and name.
+
+                        InitiateloginNetworkCall("google", google_email, google_name, "");
+
+                    }, function (error) {
+                        console.log("Error Logging in through Google.")
+                    });
+        }
+    </script>
+</head>
+
+<body data-spy="scroll" data-target=".navigation">
+<script>
+    // This is called with the results from from FB.getLoginStatus().
+    var fb_access_token;
+
+    //    function statusChangeCallback(response) {
+    //
+    //        // The response object is returned with a status field that lets the
+    //        // app know the current login status of the person.
+    //        // Full docs on the response object can be found in the documentation
+    //        // for FB.getLoginStatus().
+    //        if (response.status === 'connected') {
+    //            // Logged into your app and Facebook.
+    //        } else if (response.status === 'not_authorized') {
+    //            // The person is logged into Facebook, but not your app.
+    ////                document.getElementById('status').innerHTML = 'Please log ' +
+    ////                        'into this app.';
+    //            console.log("Please log into Facebook. Not authorized");
+    //
+    //        } else {
+    //            // The person is not logged into Facebook, so we're not sure if
+    //            // they are logged into this app or not.
+    ////                document.getElementById('status').innerHTML = 'Please log ' +
+    ////                        'into Facebook.';
+    //            console.log("Please log into Facebook");
+    //        }
+    //    }
+
+    // This function is called when someone finishes with the Login
+    // Button.  See the onlogin handler attached to it in the sample
+    // code below.
+    //    function checkLoginState() {
+    //        FB.getLoginStatus(function (response) {
+    //            statusChangeCallback(response);
+    //        });
+    //    }
+
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: APP_ID,
+            cookie: true,  // enable cookies to allow the server to access
+                           // the session
+            xfbml: true,  // parse social plugins on this page
+            version: 'v2.5' // use graph api version 2.5
+        });
+
+        // Now that we've initialized the JavaScript SDK, we call
+        // FB.getLoginStatus().  This function gets the state of the
+        // person visiting this page and can return one of three states to
+        // the callback you provide.  They can be:
+        //
+        // 1. Logged into your app ('connected')
+        // 2. Logged into Facebook, but not your app ('not_authorized')
+        // 3. Not logged into Facebook and can't tell if they are logged into
+        //    your app or not.
+        //
+        // These three cases are handled in the callback function.
+
+//        FB.getLoginStatus(function (response) {
+//            statusChangeCallback(response);
+//            fb_access_token = response.authResponse.accessToken;
+//        });
+
+    };
+
+    // Load the SDK asynchronously
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    // Here we run a very simple test of the Graph API after login is
+    // successful.  See statusChangeCallback() for when this call is made.
+    function facebookLogin() {
+        //Track that he has landed on this page
+        FB.login(function (response) {
+            if (response.authResponse) {
+
+                fb_access_token = response.authResponse.accessToken;
+                sessionStorage.setItem("hl_fb_login_access_token", response.authResponse.accessToken);
+
+                FB.api('/me?fields=email,name', function (response) {
+
+                    var fb_uid = response.id;
+                    var fb_name = response.name;
+
+                    InitiateloginNetworkCall("facebook", fb_uid, fb_name, fb_access_token);
+
+                });
+            } else {
+                console.log('User cancelled login or did not fully authorize.');
+                sweetAlert("", 'It seems like the login to your social networking account has failed. Please refresh the page and try again. If the issue persists, please drop us a mail on teach@hashlearn.com or call us on +91-7676210202.', "error");
+            }
+        }, {scope: 'public_profile,email'});
+    }
+</script>
+
+
+<!-- Banner -->
+<div id="banner" class="bg-blur">
+    <!-- Start Header -->
+    <div id="header">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="hashlearn-tab">
+                <div class="container">
+                    <a href="http://www.hashlearn.com"><img src="../img/hashlearn.85464c54640f.png"></a>
+                </div>
+            </div>
+
+            <div class="container" style="margin-top:10px;">
+                <div class="navbar-header">
+                    <!-- Start Logo / Text -->
+                    <a class="navbar-brand text-logo" href="http://now.hashlearn.com">
+                        <center>
+                            <div class="logo-text"></div>
+                            <img src="../img/edvice_small_black.ee2dfe96975c.png" style="display:none;">
+                        </center>
+                    </a>
+                    <!-- End Logo / Text -->
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- End Header -->
+
+    <div class="banner-content">
+        <div class="container">
+            <div class="row space">
+                <!-- Start Header Text -->
+                <div class="col-md-7 col-sm-7" id="left">
+                    <!-- <img src="img/logo.png" class="logo-big"> -->
+                    <h1 id="becomehltutor"><strong>Become a HashLearn tutor.
+
+                    </strong></h1>
+                    <div class="quote-container">
+                        <p>- Choose topics of your expertise<br/>
+                            - Get tutoring requests right on your mobile<br/>
+                            - Accept sessions whenever you wish<br/>
+                            - Get paid every weekend</p>
+                    </div>
+                    <iframe id="youtube-banner" width="560" height="340" src="https://www.youtube.com/embed/cgQU6byGqIU"
+                            frameborder="0" allowfullscreen></iframe>
+                    <br/>
+                    </a>
+                </div>
+                <!-- End Header Text -->
+
+                <!-- Start Banner Optin Form-->
+                <div class="col-lg-5 col-md-4 col-sm-5">
+
+
+                    <div id="sign_in_or_sign_up_section">
+                        <div class="help_students_succeed">
+                            <img src="img/helpstudentssuceed.png" width="400" height="82">
+                        </div>
+                        <div class="form-wrap" id="form">
+                            <div class="tabs">
+                                <h3 class="signup-tab"><a class="active" href="#signup-tab-content">Sign Up</a></h3>
+                                <h3 class="login-tab"><a href="#login-tab-content">Login</a></h3>
+                            </div><!--.tabs-->
+
+                            <div class="tabs-content">
+                                <div id="signup-tab-content" class="active">
+
+                                    <div id="signUpButtons">
+                                        <div class="inactive" id="fbSignUp" onclick="facebookLogin()">
+                                            <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+                                            <div class="fbText">
+                                                Continue using Facebook
+                                            </div>
+                                        </div>
+
+                                        <div class="inactive" id="gmailSignUp">
+                                            <i class="fa fa-google-plus fa-2x" aria-hidden="true"></i>
+                                            <div class="gmailText">
+                                                Continue using Google
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <input type="checkbox" id="terms_read" style="width: 12px">
+
+                                    <div class="terms" style="display: inline">I agree to the HashLearn <a
+                                            style="color: #53A8B3"
+                                            href="http://now.hashlearn.com/site/policy/tutor_tos/"
+                                            target="_blank">Terms of
+                                        Service</a> and the <a style="color: #53A8B3"
+                                                               href="http://now.hashlearn.com/privacyPolicy/"
+                                                               target="_blank">Privacy Policy</a>
+                                        Privacy Statement.</a></div>
+
+                                </div><!--.signup-tab-content-->
+
+                                <div id="login-tab-content">
+
+                                    <div class="fbLoginButton" onclick="facebookLogin()">
+                                        <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+                                        <div class="fbText">
+                                            Continue using Facebook
+                                        </div>
+                                    </div>
+
+                                    <div id="gmailLogin">
+                                        <i class="fa fa-google-plus fa-2x" aria-hidden="true"></i>
+                                        <div class="gmailText">
+                                            Continue using Google
+                                        </div>
+                                    </div>
+
+                                </div><!--.login-tab-content-->
+                            </div><!--.tabs-content-->
+                        </div><!--.form-wrap-->
+
+                    </div>
+
+                    <div id="registration_form">
+                        <center>
+                            <h2>APPLY NOW</h2>
+
+                            <!-- multistep form -->
+                            <form id="msform" class="msform">
+
+                                <ul id="progressbar">
+                                    <li class="active">Personal details</li>
+                                    <li>Preferences</li>
+                                </ul>
+                                <!-- fieldsets -->
+                                <fieldset>
+                                    <h2 class="fs-title">Personal Details</h2>
+                                    <h3 class="fs-subtitle">Step 1</h3>
+
+
+                                    <input type="text" id="full_name" name="full_name" placeholder="Full name"
+                                           class="required" autocomplete="off"/>
+
+                                    <select id="college_list" class="required">
+                                        <option value="" disabled selected>Select your College</option>
+                                    </select>
+
+                                    <input type="text" id="custom_college" name="custom_college" class="dummy"
+                                           placeholder="Enter the name of your college." autocomplete="off"/>
+
+
+                                    <div class="half_width" id="degree">
+                                        <select id="degree_list" class="required">
+                                            <option value="" disabled selected>Select your Degree</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="half_width" id="grad_year">
+                                        <select id="year" class="required">
+                                            <option value="" disabled selected>Select graduation year</option>
+                                        </select>
+                                    </div>
+
+                                    <input type="text" id="custom_degree" name="custom_degree" class="dummy"
+                                           placeholder="Enter the name of your degree." autocomplete="off"/>
+
+
+                                    <input type="text" id="phone_number" name="phone_number" placeholder="Enter 10 digit Mobile Number"
+                                           autocomplete="off"
+                                           class="required"/>
+                                    <input type="email" id="email" name="email_id" placeholder="Email ID"
+                                           autocomplete="off"
+                                           class="required"/>
+
+                                    <input id="next_button" type="button" name="next" class="next action-button_active"
+                                           value="Next"/>
+                                </fieldset>
+
+
+                                <!--This is the second page-->
+
+                                <fieldset>
+                                    <h2 class="fs-title">Preferences</h2>
+                                    <h3 class="fs-subtitle">Step 2</h3>
+
+                                    <p>Choose languages known to you</p>
+
+                                    <div class="left_floater_checkbox">
+
+
+                                        <div id="languageListCheckboxes">
+                                        </div>
+
+                                    </div>
+
+                                    <br/>
+
+                                    <p>Are you a student or a graduate?</p>
+
+                                    <div class="left_floater_radio">
+
+                                        <input type="radio" id="student" class="radio" name="stud_or_grad"
+                                               value="student"><label
+                                            for="student">Current Student</label>
+                                        <input type="radio" id="graduate" class="radio" name="stud_or_grad"
+                                               value="graduate"><label
+                                            for="graduate">Completed College</label><br/>
+                                    </div>
+
+
+                                    <select id="source_list" class="required_second_page_of_form">
+                                        <option value="" disabled selected>How did you hear about HashLearn?</option>
+                                    </select>
+
+                                    <input type="text" name="source" id="custom_source" autocomplete="off"
+                                           placeholder="Please specify how you heard about Hashlearn" class="dummy"/>
+
+                                    <input type="text" name="referral" id="referrer_name" autocomplete="off"
+                                           placeholder="Please specify name of the referrer" class="dummy"/>
+
+                                    <br/>
+
+                                    <!--<div class="terms">By proceeding, I agree that HashLearn or its representatives may-->
+                                    <!--contact me by email, phone, or SMS (including by automated means) at the email-->
+                                    <!--address or number I provide, including for marketing purposes. I have read and-->
+                                    <!--completely understand the <a href="html_images.asp" target="_blank">HashLearn-->
+                                    <!--Privacy Statement.</a></div>-->
+
+                                    <input type="button" name="previous" class="previous action-button_active"
+                                           value="Previous"/>
+                                    <input type="button" name="submit" class="submit action-button_inactive" id="submit"
+                                           value="Submit"/>
+
+
+                                </fieldset>
+                            </form>
+
+
+                        </center>
+                    </div>
+
+
+                </div>
+                <!-- End Banner Optin Form -->
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End Banner -->
+
+
+<!-- Features Section -->
+<section id="features" class="section0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="headline">
+                    <h2>Sounds interesting?</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro-para">
+            <h3>HashLearn is a mobile tutoring app that instantly connects students with tutors like you. By
+                becoming a HashLearn tutor, you can accept sessions whenever you wish, right on your phone and get
+                paid for each session you take. Now you can help others realize their dreams and make money while doing
+                so.
+            </h3>
+        </div>
+        <br/>
+
+    </div>
+</section>
+<!-- End Section -->
+
+<!-- How does it work Section -->
+<section id="working" class="section-plain">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="headline">
+                    <h2>Instant 1-on-1 sessions</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-md-4">
+                    <p><img src="../img/featurecrop1.png" class="feature_img" alt=""/></p>
+                    <h4 class="step-heading">
+                        <span class="feature-number">1</span>
+                        <br><br>
+                        Accept a lesson request
+                    </h4>
+                    <p>Accept lesson requests as per your convenience.</p>
+                </div>
+                <div class="col-md-4">
+                    <p><img src="../img/featurecrop2.png" class="feature_img" alt=""/></p>
+                    <h4 class="step-heading">
+                        <span class="feature-number">2</span>
+                        <br><br>
+                        Help the student</h4>
+                    <p>Sessions are short (about 15 mins) and chat-based.</p>
+                </div>
+                <div class="col-md-4">
+                    <p><img src="../img/featurecrop3.png" class="feature_img" alt=""/></p>
+                    <h4 class="step-heading">
+                        <span class="feature-number">3</span>
+                        <br><br>
+
+                        Earn by the minute</h4>
+                    <p>Weekly payments deposited in your account.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+</section>
+<!-- End Section -->
+
+
+<section id="testimonials" class="section-plain">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="headline">
+                    <h2>The best part about your work</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12" style="text-align:center;">
+                <div class="flexslider group" id="testimonial-slider">
+                    <ul class="slides group">
+                        <li class="group">
+                            <h4>Parents love HashLearn</h4>
+                            <p class="testimonial">The doubts which my son finds difficult to clarify in class, he gets
+                                it clarified from home using the app, which helps him in understanding the subject. This
+                                is a very good initiative. Please keep it up and maintain the high standard.</p>
+                            <p class="testimonial-user"><strong>Mayuram M., parent of Bharathwaj M., Class IX, Chettinad
+                                Vidyashram, Chennai</strong>
+                            </p>
+                        </li>
+                        <li class="group">
+                            <h4>Students trust HashLearn</h4>
+                            <p class="testimonial">It doesn't matter if you are going for coaching or not, HashLearn
+                                is a must-have for every student.</p>
+                            <p class="testimonial-user"><strong>Advaith, Class XI, Deeksha, Bangalore</strong>
+                            </p>
+                        </li>
+                        <li class="group">
+                            <h4>Students trust HashLearn</h4>
+                            <p class="testimonial">The explanation of the doubt was great! Loved the interface. Really
+                                something a student needs, a companion that we can count on anytime we want help.</p>
+                            <p class="testimonial-user"><strong>Neelabh S., Class XII, DPS R. K. Puram, New Delhi
+                            </strong>
+                            </p>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- <a class="btn tut-reg">Complete FAQ</a> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="tutor" class="section0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="headline">
+                    <h2>Apply to be a HashLearn tutor</h2>
+
+                </div>
+                <center>
+                    <a href="#top" class="btn btn-default btn-lg bottom-signup-button">Sign up as a tutor</a>
+                </center>
+            </div>
+        </div>
+        <div class="row" style="text-align:center;">
+
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer footer-sub">
+    <div class="container">
+        <div class="row">
+            <p style="font-size: 13px" id="footer-seo-text">HashLearn is India's first on-demand tutoring app.
+                We connect students with top tutors from the IITs and BITS - instantly, anytime, anywhere.
+                We serve Class 8th - 12th students preparing for CBSE, ICSE and State boards as well as all entrance
+                exams such
+                as JEE Main & Advanced, BITSAT,NEET, VITEEE, MU OET, SRMEEE, AIPMT and all State entrance exams.
+                Download our app and experience the HashLearn difference.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-sm-5">
+                <ul class="footer-brand">
+                    <li><a href="" class="logo-footer"></a></li>
+                    <li><p class="footer-left">HashLearn 2016 All Rights Reserved</p></li>
+                </ul>
+            </div>
+            <div class="col-lg-7 col-sm-7">
+                <ul class="footer-links-nav">
+                    <li><a href="http://now.hashlearn.com/#features" class="footer-link">Features</a></li>
+                    <li><a href="http://now.hashlearn.com/#working" class="footer-link">How does it work?</a></li>
+                    <li><a href="http://now.hashlearn.com/#faq" class="footer-link">FAQ</a></li>
+                    <li><a href="http://www.hash.education/about.html" class="footer-link">About</a></li>
+                    <!-- <li><a href="#" class="footer-link">Press</a></li> -->
+                    <li><a href="http://www.hash.education/contact.html">Contact</a></li>
+                    <li class="sm-icon"><a href="https://www.facebook.com/hashlearnnow"><span
+                            class="fa fa-facebook-square sm-top"></span></a></li>
+                    <li class="sm-icon"><a href="https://twitter.com/hashlearnnow"><span
+                            class="fa fa-twitter sm-top"></span></a></li>
+                    <!-- <li class="sm-icon"><a onClick="modalInviteOpen()" class="pointer">Infographic</a></li> -->
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer Bottom -->
+
+
+<script defer src="js/jquery.flexslider.4155fcfb992f.js"></script>
+<script src="js/bootstrap.min.abda843684d0.js" type="text/javascript"></script>
+<!--Packed with many functionalies such as carousel slider, responsivity, tabs, drop downs, buttons, and many other features-->
+
+<!--Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.-->
+
+<script src="js/custom.ba66161fc1c5.js" type="text/javascript"></script>
+<!-- Script File containing all customizations  -->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+
+<script>
+
+    //jQuery time
+    var current_fs, next_fs, previous_fs; //fieldsets
+    var left, opacity, scale; //fieldset properties which we will animate
+    var animating; //flag to prevent quick multi-click glitches
+
+    $(".next").click(function () {
+        if (animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
+
+        //activate next step on progressbar using the index of next_fs
+        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+        //show the next fieldset
+        next_fs.show();
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function (now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale current_fs down to 80%
+                scale = 1 - (1 - now) * 0.2;
+                //2. bring next_fs from the right(50%)
+                left = (now * 50) + "%";
+                //3. increase opacity of next_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({
+                    'transform': 'scale(' + scale + ')',
+                    'position': 'absolute'
+                });
+                next_fs.css({'left': left, 'opacity': opacity});
+            },
+            duration: 400,
+            complete: function () {
+                current_fs.hide();
+                animating = false;
+            },
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+    });
+
+    $(".previous").click(function () {
+        if (animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        previous_fs = $(this).parent().prev();
+
+        //de-activate current step on progressbar
+        $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+        //show the previous fieldset
+        previous_fs.show();
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function (now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale previous_fs from 80% to 100%
+                scale = 0.8 + (1 - now) * 0.2;
+                //2. take current_fs to the right(50%) - from 0%
+                left = ((1 - now) * 50) + "%";
+                //3. increase opacity of previous_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({'left': left});
+                previous_fs.css({'transform': 'scale(' + scale + ')', 'opacity': opacity});
+            },
+            duration: 400,
+            complete: function () {
+                current_fs.hide();
+                animating = false;
+            },
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+    });
+
+    $(".submit").click(function () {
+        return false;
+    })
+
+</script>
+
+
+<!-- End Js Files  -->
+
+
+</body>
+</html>

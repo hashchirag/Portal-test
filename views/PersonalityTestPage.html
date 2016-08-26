@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HashLearn</title>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+    <link rel="stylesheet" href="../styles/personalityTest.css">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <script src="../js/settings.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+
+<body>
+<style>
+    body:before {
+        display: none;
+        content: none;
+    }
+
+    label:before {
+        display: none;
+    }
+</style>
+
+<nav class="navbar navbar-fixed-top">
+    <header>
+        <span style="font-size:30px;text-transform: capitalize;">Tutor Personality test<br/></span><span
+            style="color:red"><small>Do not refresh or quit the page</small>
+  </span>
+
+        <!-- Timer part -->
+        <div class="canvas" id="canvasID">
+            <div class="content-box">
+                <div class="timer-display"></div>
+                <div class="timer-info"></div>
+            </div>
+        </div>
+        <!-- Timer end -->
+
+    </header>
+</nav>
+<br/><br/>
+<br/>
+<br/>
+
+<div id="emc-score"></div>
+<div class="wrap">
+
+    <p><span style="font-size: 16px;"> <b> Following is the HashLearn Tutor Personality Test to gauge your understanding of the HashLearn guidelines and communication skills. You need to score at least 70% in the tests to qualify, if you fail to do so, you would be unable to proceed any further.
+        <br/>
+        <br/> Please ensure that you,</b></span>
+        <br/>1/ Attempt all questions before submitting.<br/>
+        2/ Do no refresh or quit this page.<br/></p><br/>
+    <div class="row">
+        <section data-quiz-item>
+            <div class="question"><span class="number">1</span>What is the ideal way to explain the problem to the
+                student on HashLearn?
+            </div>
+            <div class="choices"
+                 data-choices='["Providing just the final answer","Providing the step-by-step solution with very little engagement", "Initiating the student towards the solution and helping him/her when required", "Engaging with the student without providing the solution"]'>
+            </div>
+        </section>
+        <section data-quiz-item>
+            <div class="question"><span class="number">2</span>During the chat, student uses inappropriate language, you
+                would,
+            </div>
+            <div class="choices"
+                 data-choices='["Tell the student to end the session and go away","Say nothing and report the session to the HashLearn team", "Ask the student to end the session and report to HashLearn support", "Use some inappropriate language yourself"]'>
+            </div>
+        </section>
+    </div>
+    <div class="row">
+        <section data-quiz-item>
+            <div class="question"><span class="number">3</span>You found a good-quality solution for the problem online,
+                you will:
+            </div>
+            <div class="choices"
+                 data-choices='["Post a screenshot or a web link in the chat","Use the solution (if required) and explain it clearly to the student in your own words", "Tell the student to search online himself", "Ignore the online solution completely"]'>
+            </div>
+        </section>
+        <section data-quiz-item>
+            <div class="question"><span class="number">4</span>Which of the following could lead to instant termination
+                from the HashLearn
+                platform?
+            </div>
+            <div class="choices"
+                 data-choices='["Sharing personal information with the student","Using inappropriate language with the student", "Poor performance on the platform", "All of the above"]'>
+            </div>
+        </section>
+
+
+    </div>
+    <div class="row">
+
+        <section data-quiz-item>
+            <div class="question"><span class="number">5</span>Which of the following are desirable traits in a
+                HashLearn tutor?
+            </div>
+            <div class="choices"
+                 data-choices='["Subject Knowledge","Speed and Accuracy", "Good Communication", "All of the above "]'>
+            </div>
+        </section>
+        <section data-quiz-item>
+            <div class="question"><span class="number">6</span> Last month he _____ three large fish.</div>
+            <div class="choices" data-choices='["catched","caught", "catch", "did catch"]'>
+            </div>
+        </section>
+    </div>
+    <div class="row last">
+        <section data-quiz-item>
+            <div class="question"><span class="number">7</span>Do you like New Delhi? I don't know. I _____there.</div>
+            <div class="choices" data-choices='["never went","did not go", "never gone", "have not been"]'>
+            </div>
+        </section>
+        <section data-quiz-item>
+            <div class="question"><span class="number">8</span>They don't need any help. They can do it _____ .
+            </div>
+            <div class="choices" data-choices='["theirself","theirselves", "their own", "themselves"]'>
+            </div>
+        </section>
+        <section data-quiz-item>
+            <div class="question"><span class="number">9</span>We'll call as soon as we _____ the information.</div>
+            <div class="choices" data-choices='["will have","have", "are going to have", "are having"]'>
+            </div>
+        </section>
+        <section data-quiz-item>
+            <div class="question"><span class="number">10</span>Which of the following statements is correct?</div>
+            <div class="choices"
+                 data-choices='["Chirag, Malay and Kausthub went for a trip.","Chirag and Malay and Kausthub gone for a trip.", "Chirag, Malay and Kausthub will gone for a trip.", "Chirag, Malay and Kausthub had went for a trip."]'>
+            </div>
+        </section>
+    </div>
+    <div class="submit">
+        <button id="emc-submit">Submit Answers</button>
+    </div>
+</div>
+
+<footer>
+    <div id="emc-progress"></div>
+</footer>
+
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+<script src="../js/personalityTest.js"></script>
+
+
+</body>
+</html>

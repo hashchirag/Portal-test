@@ -1,0 +1,112 @@
+@font-face {
+    font-family: ProximaNova-Regular;
+    src: url("../fonts/proximanova/proximanova-reg-webfont.f25221c0c412.ttf") format('truetype');
+}
+
+.jumbotron {
+    background: white;
+    padding: 30px;
+    font-family: ProximaNova-Regular, "Open Sans", "Raleway", Lucida Sans Unicode, Verdana, Helvetica, sans-serif !important;
+
+}
+
+p {
+    font-family: ProximaNova-Regular, "Open Sans", "Raleway", Lucida Sans Unicode, Verdana, Helvetica, sans-serif !important;
+
+}
+
+.timers {
+    height: 14px;
+    font-size: 14px;
+}
+
+.transactions {
+    overflow-y: scroll;
+    height: 400px;
+}
+
+.fa .fa-clock-o {
+
+    font-size: 10px;
+}
+
+.col-sm-6 p {
+    font-size: 16px;
+}
+
+.col-sm-6 .right {
+    margin-top: 13px;
+    display: inline;
+    padding-left: 8px;
+}
+
+.session_id {
+    font-size: 20px;
+    text-align: left;
+    padding-top: 4px;
+    font-weight: 100;
+}
+
+#left_section_payment {
+    margin-left: 40px;
+    height: 600px;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px #888;
+    box-shadow: 0 0 5px #888;
+    background: white;
+    border-radius: 10px;
+}
+
+#right_section_payment {
+    height: 600px;
+    margin-left: 40px;
+    -moz-box-shadow: 0 0 2px #aaa;
+    -webkit-box-shadow: 0 0 2px #aaa;
+    box-shadow: 0 0 5px #aaa;
+    background: white;
+    border-radius: 10px;
+}
+
+.heading_payment {
+    color: #7a7982;
+    text-align: left;
+    opacity: 0.8;
+    font-size: 20px;
+}
+
+.horizontal_line {
+    background: #888888;
+    height: 1px;
+    opacity: 0.5;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+
+.col-sm-8 {
+    font-size: 15px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.col-sm-3 {
+    font-size: 15px;
+    margin-top: -4px;
+    text-align: left;
+    opacity: 0.8;
+
+}
+
+.col-sm-3 p {
+    color: #33a6b2;
+    display: inline;
+    padding-left: 4px;
+}
+
+.col-sm-8 p {
+    color: #7a7982;
+}
+
+#total_amount_paid {
+    color: green;
+}

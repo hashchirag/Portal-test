@@ -1,0 +1,330 @@
+<div class="container4">
+    <div class="row">
+        <div class="col-sm-3" id="bank_details">
+            <div class="modal fade" id="bankModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="jumbotron" id="jumbotron_bank_details">
+
+                                <div class="payment_heading" style="color: #2CA7B2 ; font-size: 24px">Payment Details
+                                </div>
+                                <div class="horizontal_line2"></div>
+
+
+                                <div class="pan_header">
+                                    Fill in your account details
+                                </div>
+
+                                <div class="gray_class_form">
+
+                                    <input type="text" id="ifsc" placeholder="IFSC Code">
+
+                                    <div class="horizontal_line2"></div>
+
+
+                                    <input type="text" id="bank_no" placeholder="Bank Account Number">
+
+                                    <div class="horizontal_line2"></div>
+
+
+                                    <input type="text" id="bank_no_verify" placeholder="Confirm Bank Account Number">
+
+                                    <div class="horizontal_line2"></div>
+
+                                    <input type="text" id="payee_name" placeholder="Payee Name on Account">
+
+                                </div>
+
+                                <div class="horizontal_line2">
+                                </div>
+
+                                <div class="submit_bank inactivesavebank">
+                                    <p class="btnText" id="bank_save_button_text">Save Bank Details</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!--Middle Section-->
+        <div class="col-sm-6" id="profile_view">
+
+            <div class="jumbotron" id="profile">
+
+
+                <div class="user_details_text" style="color : #2CA7B2;">
+                    User Details
+                </div>
+
+
+                <div class="horizontal_line2"></div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <div class="gray_class">
+                            <span class="tooltip-toggle" aria-label="Name" tabindex="0">
+                            <i style="font-size: 16px" class="fa fa-user" aria-hidden="true"></i>
+                            <p id="user_name"><b>User Name</b></p></span>
+                        </div>
+
+                        <div class="horizontal_line2">
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6">
+
+                        <div class="gray_class">
+                            <span class="tooltip-toggle" aria-label="Mobile" tabindex="0">
+                            <i style="font-size: 16px" class="fa fa-phone" aria-hidden="true"></i>
+                            <p id="user_phone">User Number</p></span>
+                        </div>
+
+                        <div class="horizontal_line2">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <div class="gray_class">
+                            <span class="tooltip-toggle" aria-label="College" tabindex="0">
+                            <i style="font-size: 16px" class="fa fa-building" aria-hidden="true"></i>
+                            <p id="user_college">User College</p></span>
+                        </div>
+
+                        <div class="horizontal_line2">
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6">
+
+                        <div class="gray_class">
+                            <span class="tooltip-toggle" aria-label="Degree" tabindex="0">
+                            <i style="font-size: 16px" class="fa fa-bookmark" aria-hidden="true"></i>
+                            <p id="user_degree">User Degree</p></span>
+                        </div>
+
+                        <div class="horizontal_line2">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <div class="gray_class">
+                            <span class="tooltip-toggle" aria-label="Email" tabindex="0">
+                            <i style="font-size: 16px" class="fa fa-envelope" aria-hidden="true"></i>
+                            <p id="user_email">User Email</p></span>
+                        </div>
+
+                        <div class="horizontal_line2">
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6">
+
+                        <div class="gray_class">
+                            <span id="avg_rating" class="tooltip-toggle" aria-label="Rating" tabindex="0">
+                            <i style="font-size: 16px" class="fa fa-star" aria-hidden="true"></i>
+                            <p id="user_rating">User Rating</p></span>
+                        </div>
+
+                        <div class="horizontal_line2">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!--<div class="image_section">-->
+
+                <!--<p id="image_section"> Upload id card here</p>-->
+
+                <!--</div>-->
+
+
+                <div class="row" id="image_section">
+                    <div class="col-sm-6">
+
+                        <div class="upload_image_text">
+                            <p id="image_text">Upload your ID Card here</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6" id="image_form">
+
+                        <form>
+                            <label class="file" id="file_name_label">
+                                <p id="file_name">Upload here
+                                    <i class="fa fa-upload" style="color: #2CA7B2 ; padding-left: 5px"
+                                       aria-hidden="true"></i>
+                                </p>
+                                <input type="file" id="image_input">
+                                <!-- use multiple, even if it’s not allowed, to be able to show an info text -->
+                            </label>
+                        </form>
+
+                    </div>
+                </div>
+
+                <div class="horizontal_line2" id="line_after_image_section">
+                </div>
+
+                <div class="bank_and_pan_section">
+                    <div class="row">
+                        <div class="col-sm-6" id="payment_div">
+
+                            <div class="payment">
+                                <p id="payment_text" data-toggle="modal" data-target="#bankModal">Payment Details<i
+                                        class="fa fa-credit-card" aria-hidden="true"></i>
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-sm-6" id="pan_div">
+
+                            <div class="payment">
+                                <p id="pan_text" data-toggle="modal" data-target="#panModal">PAN Card Details<i
+                                        class="fa fa-list-alt" aria-hidden="true"></i>
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="horizontal_line2" id="line_after_bank_and_pan_section">
+                </div>
+
+                <div class="button2 inactivesave" id="save_image">
+                    <p class="btnText" id ="save_image_btn_text">Save</p>
+                    </a>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-sm-3" id="pan_details">
+            <div class="modal fade" id="panModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+
+
+                            <div class="jumbotron" id="jumbotron_pan_details">
+
+                                <div class="pan_heading" style="color: #2CA7B2;text-align: center;font-size: 20px">Pan Card Details
+                                </div>
+                                <div class="horizontal_line2"></div>
+
+
+                                <div class="pan_header">
+                                    Fill your pan card details
+                                </div>
+
+
+                                <div  style="text-align: center;font-size: 18px" class="pan_card_importance">
+                                    Importance of pan card
+                                </div>
+
+                                <div class="pan_card_importance_text">
+                                    <br/>
+
+                                    <span style="color: black">1/</span> As per Indian Laws, if you provide your PAN
+                                    card details here, there would be a
+                                    <span style="color: #2CA7B2">
+                                        TDS (Tax Deducted at Source) worth 10% of your
+                                    earnings on the app.
+                                        </span>
+                                    <br/>
+                                    <br/>
+
+                                    <span style="color: black">2/</span> If you don't provide your PAN card details,
+                                    you're still allowed to be an HashLearn tutor. However, this means that the
+                                    <span style="color: #2CA7B2">
+                                    TDS (Tax
+                                    Deducted at Source) would be worth 20% of your earnings on the app
+                                    </span>, in accordance
+                                    with Indian Laws.
+
+                                    <br/>
+                                    <br/>
+
+                                </div>
+
+
+                                <div class="row" id="pan_image_section">
+                                    <div class="col-sm-5">
+                                        <div class="pan_card_image_text">Upload your PAN Card Image</div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+
+                                        <form id="pan_image">
+                                            <label class="file" id="pan_image_label">
+                                                <p id="pan_name">Upload here</p>
+                                                <i class="fa fa-upload" style="color: #2CA7B2 ; padding-left: 5px"
+                                                   aria-hidden="true"></i>
+                                                <input type="file" id="pan_input">
+                                                <!-- use multiple, even if it’s not allowed, to be able to show an info text -->
+                                            </label>
+                                        </form>
+
+                                    </div>
+                                </div>
+
+                                <div class="gray_class_form">
+                                    <input type="text" id="pan_number" placeholder="Enter PAN Card Number Here">
+                                </div>
+
+
+                                <div class="horizontal_line2">
+                                </div>
+
+                                <div class="submit_pan activesavepan">
+                                    <p class="btnText" id="pan_save_button_text">Save PAN Card Details</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+</div>

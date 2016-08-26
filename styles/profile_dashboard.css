@@ -1,0 +1,503 @@
+.row {
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+#profile_view {
+}
+
+#user_email {
+    font-size: 14px;
+}
+
+#bank_details {
+    margin-top: 0px;
+    height: 550px;
+    opacity: 1;
+}
+
+#jumbotron_bank_details {
+    background: white !important;
+}
+
+#payment_div {
+    cursor: pointer;
+}
+
+#pan_div {
+    cursor: pointer;
+}
+
+.payment_div_inactive {
+    cursor: none;
+}
+
+.pan_div_inactive {
+    cursor: none;
+}
+
+#pan_details {
+    margin-top: 0px;
+    height: 100%;
+    opacity: 1;
+}
+
+.pan_card_importance {
+    text-align: center;
+    color: #333333;
+    font-size: 14px;
+}
+
+.pan_card_importance_text {
+    font-size: 16px;
+    line-height: 100%;
+    color: gray;
+    opacity: 0.8;
+    letter-spacing: 0.5px;
+
+}
+
+#pan_save_button_text {
+    color: white;
+    font-size: 14px;
+}
+
+#bank_save_button_text {
+    color: white;
+    font-size: 14px;
+}
+
+.pan_header {
+    font-size: 18px;
+    text-align: center;
+    color: black;
+}
+
+.custom_wrapper {
+    padding: 20px;
+}
+
+#profile {
+    height: 580px;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px #888;
+    box-shadow: 0 0 5px #888;
+    background: white;
+    border-radius: 10px;
+}
+
+.user_details_text {
+    color: gray;
+}
+
+.horizontal_line2 {
+    background: #888888;
+    height: 1px;
+    opacity: 0.5;
+    margin-top: 1px;
+    margin-bottom: 10px;
+}
+
+.horizontal_line3 {
+    background: #888888;
+    height: 1px;
+    opacity: 0.5;
+    margin-bottom: 10px;
+}
+
+.gray_class p {
+    display: inline;
+    color: gray;
+    line-height: 1px;
+    margin-left: 0px;
+    padding-left: 5px;
+    font-size: 14px;
+    padding-top: 0px;
+}
+
+i {
+    color: gray;
+    margin-top: 5px;
+    padding-top: 10px;
+}
+
+.yellow_border {
+    background: #FFCE0E;
+    height: 5px;
+}
+
+#image_section {
+    margin-top: 10px;
+    height: 75px;
+}
+
+#bank_and_pan_section {
+    height: 40px;
+}
+
+#payment_text {
+    margin: 10px;
+    padding-bottom: 20px;
+    color: #5C53A4;
+}
+
+#pan_text {
+    margin: 10px;
+    padding-bottom: 20px;
+    color: #5C53A4;
+}
+
+.fa-credit-card {
+    margin-left: 10px;
+    color: red;
+}
+
+.fa-list-alt {
+    margin-left: 10px;
+    color: #3FC1C9;
+}
+
+.button2 {
+
+}
+
+.button a {
+    text-decoration: none !important;
+}
+
+.btnText {
+    color: #fff;
+    transition: .3s;
+    font-size: 28px;
+    padding-top: 15px;
+    font-family: ProximaNova-Regular, "Open Sans", "Raleway", Lucida Sans Unicode, Verdana, Helvetica, sans-serif;
+}
+
+.button:active { /*Clicked and held*/
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+#image_section {
+    font-size: 16px;
+    color: gray;
+}
+
+#pan_image_section {
+    font-size: 12px;
+    color: gray;
+    line-height: 100%;
+}
+
+.payment_heading {
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+}
+
+#ifsc {
+    border: none;
+    width: 100%;
+    display: inline;
+    font-size: 12px;
+    padding-bottom: 8px;
+}
+
+#bank_no {
+    border: none;
+    width: 100%;
+    display: inline;
+    font-size: 12px;
+    padding-bottom: 8px;
+
+}
+
+#bank_no_verify {
+    border: none;
+    width: 100%;
+    display: inline;
+    font-size: 12px;
+    padding-bottom: 8px;
+
+}
+
+#payee_name {
+    border: none;
+    width: 100%;
+    display: inline;
+    padding-bottom: 8px;
+    font-size: 12px;
+}
+
+#pan_number {
+    border: none;
+    width: 100%;
+    display: inline;
+    padding-bottom: 8px;
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.gray_class_form input {
+    display: inline;
+    color: black;
+    opacity: 0.8;
+    height: 30px;
+    line-height: 30px;
+}
+
+.submit_pan {
+    margin-top: 50px;
+    background: #2CA7B2;
+    height: 50px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit_bank {
+    margin-top: 50px;
+    background: #2CA7B2;
+    height: 50px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#save_image {
+}
+
+.pan_card_image_text {
+    font-size: 14px;
+    line-height: 100%;
+    margin-top: 15px;
+}
+
+.upload_image_text {
+    padding-top: 10px;
+}
+
+#image_text {
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    height: 10px;
+}
+
+label.file {
+    position: relative;
+    display: block;
+    width: 60%;
+    text-align: center;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    background: #eeeeee;
+    cursor: pointer;
+
+}
+
+label.file:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+label.file:active,
+label.file.focus {
+    border-color: #2CA7B2;
+}
+
+input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 100px;
+    opacity: 0;
+    outline: 0;
+    border: 1px solid red;
+    cursor: pointer;
+
+}
+
+#file_name {
+    font-size: 14px;
+    text-align: center;
+    line-height: 100%;
+    padding-top: 5px;
+}
+
+#pan_image {
+    width: 200px;
+    height: 25px;
+}
+
+#pan_input {
+    width: 200px;
+    height: 25px;
+}
+
+#line_after_image_section {
+    margin-top: 10px;
+}
+
+#file_name_label {
+    height: 60px;
+    width: 200px;
+}
+
+#pan_name {
+    height: 50px;
+    font-size: 14px;
+    width: 200px;
+    color: gray;
+    text-align: center;
+}
+
+.activesave {
+    background: #6DBE45 !important;
+    width: 200px;
+    height: 50px;
+    overflow: hidden;
+    text-align: center;
+    transition: .2s;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+    margin-left: 30%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.inactivesave {
+    background: gray !important;
+    width: 200px;
+    height: 50px;
+    overflow: hidden;
+    text-align: center;
+    transition: .2s;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+    margin-left: 30%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    position: relative;
+    cursor: not-allowed;
+}
+
+.inactivesavebank {
+    margin-top: 50px;
+    height: 50px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: not-allowed;
+    background: #2CA7B2;
+
+}
+
+.activesavebank {
+    margin-top: 50px;
+    background: #2CA7B2;
+    height: 50px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.activesavepan {
+    margin-top: 50px;
+    background: #2CA7B2;
+    height: 50px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inactivesavepan {
+    margin-top: 50px;
+    height: 50px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: not-allowed;
+    background: #2CA7B2;
+
+}
+
+#pan_image_label {
+    height: 50px;
+    cursor: pointer;
+}
+
+.tooltip-toggle {
+    position: relative;
+    font-family: ProximaNova-Regular, "Open Sans", "Raleway", Lucida Sans Unicode, Verdana, Helvetica, sans-serif;
+
+}
+
+.tooltip-toggle::before {
+    position: absolute;
+    top: -52px;
+    left: -30px;
+    background: #2CA7B2;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bolder;
+    content: attr(aria-label);
+    padding: 0.5rem;
+    text-transform: none;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    width: 80px;
+}
+
+.tooltip-toggle::after {
+    position: absolute;
+    top: -12px;
+    left: 9px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #2CA7B2;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+    margin-left: -5px;
+    width: 0;
+}
+
+.tooltip-toggle:focus {
+    outline: none
+
+}
+
+.tooltip-toggle::before, .tooltip-toggle::after {
+    color: #efefef;
+    font-family: ProximaNova-Regular, "Open Sans", "Raleway", Lucida Sans Unicode, Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+}
+
+.tooltip-toggle:focus::before, .tooltip-toggle:focus::after, .tooltip-toggle:hover::before, .tooltip-toggle:hover::after {
+    opacity: 1;
+    -webkit-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+}

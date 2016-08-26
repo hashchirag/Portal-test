@@ -1,0 +1,182 @@
+/*!
+ * Bootstrap v3.2.0 (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background-image: url('../img/background.png');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100% !important;
+}
+
+.links {
+  position: relative;
+  text-align: center;
+  //height: 25px;
+  color: #7a7982;
+  font-size: 12px;
+  display: block;
+  top: 190px;
+
+}
+
+.links a{
+  color: #7a7982;
+  font-size: 12px;
+  text-decoration: none;
+  padding-left:1em;
+  text-transform: uppercase;
+
+}
+
+.logotop {
+  background: url('../img/toplogofinal.png') no-repeat 10px;
+  width: 50%;
+  height: 200px;
+  left: 40%;
+  position: relative;
+}
+
+.entry-social {
+  margin-bottom: 20px;
+  color: rgb(126, 126, 126);
+  display: block;
+  font-family: 'Open Sans', Tahoma, Verdana, Arial, sans-serif, Faruma, Faseyha;
+  font-size: 17px;
+  font-weight: normal;
+  height: auto;
+  line-height: 23.799999237060547px;
+  width: 100%;
+  float: left;
+  border: solid 0px #aaa;
+  text-align: center;
+}
+
+.entry-social a {
+  text-decoration: none;
+  display: block;
+  color: #FFFFFF !important;
+  font-weight: bold;
+  transition: background-color .3s;
+  height: 30px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.entry-social .fb a {
+  padding: 15px 5px 7px 26px;
+}
+
+.entry-social .fb {
+  background: #3B5999 url('../img/fbfinal.png') no-repeat 10px center;
+}
+
+.entry-social .gplus {
+  background: #D54135 url('../img/gpfinal.png') no-repeat 10px center;
+}
+
+.entry-social .gplus a {
+  padding: 15px 10px 7px 32px;
+}
+
+.box {
+  width: 50%;
+  height: 170px;
+  position: fixed;
+  top: 55%;
+  background: #FFFFFF;
+  border: 1px solid #898989;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -25%;
+  box-shadow: 0px 20px 10px -20px #dddddd;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; /* future proofing */
+  -khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
+
+.box .p2 {
+  text-align: center;
+  color: #5f5f5f;
+  font-size: 0.80rem;
+  height: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -20px;
+}
+
+.span_2_of_2 {
+  width: 100%;
+}
+
+.span_1_of_2 {
+  width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .span_2_of_2 {
+    width: 100%;
+  }
+  .span_1_of_2 {
+    width: 100%;
+  }
+}
+
+/*  SECTIONS  ============================================================================= */
+
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 30px;
+}
+
+/*  GROUPING  ============================================================================= */
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child {
+  margin-left: 0;
+}
+
+/* all browsers except IE6 and lower */
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+}
+
+

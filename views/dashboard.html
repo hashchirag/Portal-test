@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="dashboardApp">
+
+<head>
+    <!-- SCROLLS -->
+    <script src="http://tristanedwards.me/u/SweetAlert//lib/sweet-alert.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://tristanedwards.me/u/SweetAlert//lib/sweet-alert.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="../styles/test_dashboard.css"/>
+    <link rel="stylesheet" href="../styles/payment_dashboard.css"/>
+    <link rel="stylesheet" href="../styles/profile_dashboard.css"/>
+    <link rel="stylesheet" href="../styles/dashboard.css"/>
+    <title>HashLearn</title>
+
+
+    <!-- SPELLS -->
+    <script src="https://code.jquery.com/jquery-3.0.0.js"
+            integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.min.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/dashboard.js"></script>
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="profileController">
+
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <!--<a class="navbar-brand" href="#">Brand</a>-->
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+            <div class="profile_section" onclick="location.href='#' ">
+
+                <i class="glyphicon glyphicon-user"></i>
+
+                <div class="profile_header_text">
+                    <p>Profile</p>
+                </div>
+
+                <div class="profile_header_name">
+                    <p id="user_name_header"></p>
+                </div>
+
+                <div class="navbar-brand">
+                    <div class="logo_header">
+                        <img src="../img/logo_hashlearn_dashboard.png" height="40" width="140">
+                    </div>
+
+
+                    <div class="logo_name">
+                        My Dashboard
+                    </div>
+                </div>
+
+
+            </div>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="#tests" id="test_icon"><i class="glyphicon glyphicon-list-alt" id="test_text_header"></i> Tests</a>
+            </li>
+            <li><a href="#topics"><i class="glyphicon glyphicon-pencil"></i> Topics</a></li>
+            <li><a href="#payment"><i class="glyphicon glyphicon-credit-card"></i> Earnings</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div id="main">
+
+    <!-- angular templating -->
+    <!-- this is where content will be injected -->
+    <div ng-view></div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "hashlearn-now-tutor-corner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket-hashlearn:/hashlearn/tutorcorner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.13.4"
+  },
+    "engines":{
+	"node":"4.2.6"
+    }    
+}
